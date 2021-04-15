@@ -496,12 +496,90 @@
 // document.write(cristian.getAttribute("type") + "</br>");
 // cristian.setAttribute("type", "");
 // document.write(cristian.getAttribute("type"));
-const titulo = document.querySelector(".titulo");
-titulo.setAttribute("contentEditable", "true");
-titulo.setAttribute("dir", "rtl");
-//titulo.setAttribute("hidden", "false");
-titulo.setAttribute("tabindex", "2");
-const contenido = document.querySelector("#cristian");
-contenido.setAttribute("tabindex", "0");
-contenido.setAttribute("title", "Gilipollas");
+// const titulo = document.querySelector(".titulo");
+// titulo.setAttribute("contentEditable", "true");
+// titulo.setAttribute("dir", "rtl");
+// //titulo.setAttribute("hidden", "false");
+// titulo.setAttribute("tabindex", "2");
+// const contenido = document.querySelector("#cristian");
+// contenido.setAttribute("tabindex", "0");
+// contenido.setAttribute("title", "Gilipollas");
+// const input = document.querySelector(".inputverga");
+// document.write(input.value)
+// input.type = "file";
+
+// input.accept = "image/png"; //para input type="file" delimita los ficheros que acepta
+
+
+// const inputText = document.querySelector("#min");
+// inputText.minLength = 4;
+// inputText.setAttribute("placeholder", "esto");
+// inputText.required = "true";
+// const titulo = document.querySelector("#titulo");
+// titulo.style.color = "blue";
+// titulo.style.backgroundColor = "red";
+// titulo.classList.add("mierda"); //añade clase
+// titulo.classList.add("puerco");
+// titulo.classList.add("cerdo");
+// titulo.classList.remove("mierda"); //elimina una clase
+// let valor = titulo.classList.item(1); //selecciona una clase
+// document.write(valor)
+// titulo.classList.contains("cerdo"); //devolvería TRUE, comprueba si tiene una clase
+// titulo.classList.toggle("buka");  //si no tiene la clase, la agrega, si la tiene, la borra
+// titulo.classList.replace("cerdo", "perrro");
+// let resultado = titulo.textContent; //devuelve el texto de cualquier nodo
+// resultado = titulo.innerHTML; //devuelve el código de cualquier nodo
+// resultado = titulo.outerHTML; //devuelve el código de cualquier nodo
+// alert(resultado)
+// document.write(resultado);
+// const contenedor = document.querySelector(".contenedor");
+// const item = document.createElement("LI"); //crea etiqueta
+
+// const textDelItem = document.createTextNode("1 listaaaa1"); //crea texto para el nodo
+
+// item.appendChild(textDelItem); //introduce texto en nodo
+// item.innerHTML ="2 otrooo"; //no es un objeto
+// contenedor.appendChild(item)
+
+
+const contenedor = document.querySelector(".contenedor");
+// const fragmento = document.createDocumentFragment();
+
+// for (i = 0; i < 20; i++) {
+// const item = document.createElement("LI");
+// item.innerHTML = "ERES EL MEJOR";
+// fragmento.appendChild(item);
+// }
+// contenedor.appendChild(fragmento);
+// const primerHijo = contenedor.firstChild;
+// const primerElementHijo = contenedor.firstElementChild;
+// const ultimoHijo = contenedor.lastChild;
+// const ultimoElementHijo = contenedor.lastElementChild;
+//const hijos = contenedor.childNodes;
+//hijos.forEach(hijo => console.log(hijo));
+// const hijos = contenedor.children;
+// for (hijo in hijos){
+//     console.log(hijo)
+// }
+
+const parrafo = document.createElement("P").innerHTML="Párrado";
+const h2_nuevo = document.createElement("H2");
+h2_nuevo.innerHTML = "mIERDA";
+h2_antiguo = document.querySelector(".h2");
+let respuesta = h2_antiguo.hasChildNodes();
+if (respuesta) {
+    document.write("TIENE HIJOS")
+} else {
+    document.write("NO TIENE HIJOS")
+}
+
+//contenedor.replaceChild(h2_nuevo , h2_antiguo);
+//contenedor.removeChild(h2_antiguo);
+console.log(h2_antiguo.parentElement);
+console.log(h2_antiguo.nextSibling);
+console.log(h2_antiguo.previousSibling);
+console.log(h2_antiguo.previousElementSibling);
+console.log(h2_antiguo.nextElementSibling);
+
+console.log(Element.closest(".contenedor")); //devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro
 
